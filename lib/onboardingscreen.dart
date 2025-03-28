@@ -1,7 +1,7 @@
 import 'package:calismate/intro%20screens/intropage1.dart';
 import 'package:calismate/intro%20screens/intropage2.dart';
 import 'package:calismate/intro%20screens/intropage3.dart';
-import 'package:calismate/pages/loginpage.dart';
+import 'package:calismate/pages/login/loginpage.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -44,6 +44,7 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
                   "skip",
                   style: TextStyle(
                     fontSize: 18,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold
                   ),
                 ),
@@ -58,6 +59,7 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
                 child: Text(
                   !onlastpage ?"next":"done",
                   style: TextStyle(
+                    color: Colors.black,
                     fontSize: 18,
                     fontWeight: FontWeight.bold
                   ),

@@ -1,5 +1,6 @@
 import 'package:calismate/onboardingscreen.dart';
-import 'package:calismate/pages/loginpage.dart';
+import 'package:calismate/pages/login/loginpage.dart';
+import 'package:calismate/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,6 +19,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: lightmode,
+      darkTheme: darkmode,
       title: 'TheGorgeousLogin',
       home:const Onboardingscreen(),
       routes: {

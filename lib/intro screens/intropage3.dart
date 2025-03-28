@@ -19,6 +19,7 @@ class Intropage3 extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 18,
+                color: Colors.black
               ),
             ),
           ),
