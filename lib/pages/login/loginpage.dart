@@ -14,6 +14,7 @@ class _LoginpageState extends State<Loginpage> {
   Widget build(BuildContext context) {
     final double screeheight = MediaQuery.sizeOf(context).height;
     return Scaffold(
+      backgroundColor:Theme.of(context).colorScheme.background,
       body: SingleChildScrollView(
         padding: EdgeInsets.only(top: screeheight*0.1),
         child: Center(

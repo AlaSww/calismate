@@ -1,3 +1,4 @@
+import 'package:calismate/pages/mainPage.dart';
 import 'package:flutter/material.dart';
 
 class Loginform extends StatelessWidget {
@@ -36,18 +37,21 @@ class Loginform extends StatelessWidget {
             padding:EdgeInsets.only(left: screenwidth*0.58),
             child: Text("forgot password?"),
             ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(10)
-            ),
-            alignment: Alignment.center,
-            width: screenwidth*0.7,
-            child: Text(
-              "LOGIN",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: screenwidth*0.06
+          GestureDetector(
+             onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Mainpage()));},
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.deepPurple,
+                borderRadius: BorderRadius.circular(10)
+              ),
+              alignment: Alignment.center,
+              width: screenwidth*0.7,
+              child: Text(
+                "LOGIN",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: screenwidth*0.06
+                ),
               ),
             ),
           ),
