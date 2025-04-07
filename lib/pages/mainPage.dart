@@ -20,7 +20,10 @@ class _MainpageState extends State<Mainpage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Image.asset(
-              "assets/logo.png",
+              Theme.of(context).colorScheme.background==Color.fromARGB(255, 36, 36, 36)
+              ?"assets/logodark.png"
+              :"assets/logo.png"
+              ,
               height: screenwidth*0.3,
               ),
           ],
@@ -28,35 +31,46 @@ class _MainpageState extends State<Mainpage> {
         actions: [
           IconButton(
             onPressed: (){}, 
-            icon:Icon(Icons.person),
+            icon: Icon(Icons.favorite),
+            iconSize: screenwidth*0.07,
+            ),
+          IconButton(
+            onPressed: (){}, 
+            icon:Icon(Icons.search),
             iconSize: screenwidth*0.08,
             )
         ],
       ),
-      bottomNavigationBar: GNav(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        tabs: [
-          GButton(
-            icon:Icons.home,
-            text: "Home",
-            gap: 8,
+      bottomNavigationBar: Container(
+        color: Theme.of(context).colorScheme.primary,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GNav(
+            backgroundColor: Theme.of(context).colorScheme.primary,
+            tabs: [
+              GButton(
+                icon:Icons.home,
+                text: "Home",
+                gap: 8,
+              ),
+              GButton(
+                icon:Icons.schedule,
+                text: "Plans",
+                gap: 8,
+              ),
+              GButton(
+                icon:Icons.message,
+                text: "Messages",
+                gap: 8,
+              ),
+              GButton(
+                icon:Icons.person,
+                text: "Profile",
+                gap: 8,
+              ),
+            ],
           ),
-          GButton(
-            icon:Icons.schedule,
-            text: "Plans",
-            gap: 8,
-          ),
-          GButton(
-            icon:Icons.message,
-            text: "Messages",
-            gap: 8,
-          ),
-          GButton(
-            icon:Icons.settings,
-            text: "Settings",
-            gap: 8,
-          ),
-        ],
+        ),
       ),
     );
   }
